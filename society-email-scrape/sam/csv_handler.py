@@ -1,12 +1,11 @@
 import csv
 
+# Class that handles all the fiddly bits of reading a CSV.
 class CSVHandler:
     fileLocation = ""
 
     def __init__(self, fileLocation):
         self.fileLocation = fileLocation
-        # self.fileRead = open(fileLocation, "r")
-        # self.fileWrite = open(fileLocation, "w")
 
     def read(self):
         file = open(self.fileLocation, "r")

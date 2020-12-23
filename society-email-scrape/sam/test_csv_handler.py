@@ -6,7 +6,7 @@ TEST_FILE_CONTENTS = [["1", "Peterson", "Bob", "bpeterson@gmail.com"], ["2", "Ma
 
 class TestCSVHandler:
     testFile = CSVHandler(TEST_FILE_LOCATION)
-
+    
     def testOpenFile(self):
         assert self.testFile != None
     
