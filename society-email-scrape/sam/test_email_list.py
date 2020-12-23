@@ -3,7 +3,7 @@ from csv_handler import CSVHandler
 
 EMAIL_FILE_LOCATION = "data/email-list.csv"
 
-
+@pytest.mark.skip
 def testCommitteeExists(committee):
     emailFile = CSVHandler(EMAIL_FILE_LOCATION)
     contents = emailFile.read()
