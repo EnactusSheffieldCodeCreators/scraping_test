@@ -6,16 +6,14 @@ from csv_handler import CSVHandler
 
 EMAIL_FILE_LOCATION = "data/email-list.csv"
 
-# Marked to skip as this function is a utility for the 
-# other tests to use.
-@pytest.mark.skip
-def testCommitteeExists(committee):
+
+def doesCommitteeExist(committee):
     """
     Args:
         committee: list of information about a committee.
 
     Returns:
-        boolean which is true if and only if the committe 
+        boolean which is true if and only if the committee
         is in the CSV file.
     """
     emailFile = CSVHandler(EMAIL_FILE_LOCATION)
@@ -30,15 +28,15 @@ def testCommitteeExists(committee):
 
 
 class TestEmailList:
-    # Test if spesific known data is in the CSV.
+    # Test if specific known data is in the CSV.
     def testWelfareCommitteeExists(self):
         welfareCommittee = ["Welfare Committee",
                             "welfare.committee@sheffield.ac.uk"]
-        assert testCommitteeExists(welfareCommittee)
+        assert doesCommitteeExist(welfareCommittee)
 
     def testBoardGamesSocietyExists(self):
         boardGamesSociety = ["Board Games Society", "boardsoc@sheffield.ac.uk"]
-        assert testCommitteeExists(boardGamesSociety)
+        assert doesCommitteeExist(boardGamesSociety)
 
     # Test if the number of societies in the CSV is about expected.
     def testNumbersAreRoughlyCorrect(self):
