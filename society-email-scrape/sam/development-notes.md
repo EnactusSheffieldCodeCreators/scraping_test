@@ -1,5 +1,0 @@
-- Start by finding all of the URL extensions for each of the societie's individual pages.
-- Build out a function to extract the title and the email from each individual page.
-- Test all pages and get an error caused by Bummit having a custom page format, god damnit.
-- Build in checking so that the script leaves pages that it can't work out alone.
-- Run testing on the file to check it is roughly what we were expecting.
